@@ -28,6 +28,10 @@ void test_strrindex_example_6() {
     assert(strrindex("ACTGGTCAGGTCA", "") == -1);
 }
 
+void test_strrindex_example_7() {
+    assert(strrindex("", "") == 0);
+}
+
 int main() {
     test_strrindex_example_1();
     test_strrindex_example_2();
@@ -35,5 +39,6 @@ int main() {
     test_strrindex_example_4();
     test_strrindex_example_5();
     test_strrindex_example_6();
+    test_strrindex_example_7();
     return 0;
 }

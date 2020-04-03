@@ -4,6 +4,10 @@
 int strrindex(char src[], char pattern[]) {
     int src_len = strlen(src);
     int pattern_len = strlen(pattern);
+
+    if (src_len == 0 && pattern_len == 0)
+        return 0;
+
     int i, j, k;
 
     for (i = src_len - pattern_len - 1; i >= 0; i--) {
