@@ -1,0 +1,39 @@
+/* Exercise 4-1 */
+
+#include <assert.h>
+
+#include "strrindex.h"
+
+void test_strrindex_example_1() {
+    assert(strrindex("hello", "e") == 1);
+}
+
+void test_strrindex_example_2() {
+    assert(strrindex("hello", "l") == 3);
+}
+
+void test_strrindex_example_3() {
+    assert(strrindex("hello", "a") == -1);
+}
+
+void test_strrindex_example_4() {
+    assert(strrindex("ACTGGTCAGGTCA", "GG") == 8);
+}
+
+void test_strrindex_example_5() {
+    assert(strrindex("", "GG") == -1);
+}
+
+void test_strrindex_example_6() {
+    assert(strrindex("ACTGGTCAGGTCA", "") == -1);
+}
+
+int main() {
+    test_strrindex_example_1();
+    test_strrindex_example_2();
+    test_strrindex_example_3();
+    test_strrindex_example_4();
+    test_strrindex_example_5();
+    test_strrindex_example_6();
+    return 0;
+}
