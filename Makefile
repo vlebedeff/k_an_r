@@ -1,6 +1,6 @@
 CFLAGS=-Wall --std=c99
 
-all: bin/strrindex_test
+test: bin/strrindex_test
 
 bin:
 	mkdir bin
