@@ -2,7 +2,7 @@
 
 #include <assert.h>
 
-#include "strrindex.h"
+extern int strrindex(char src[], char pattern[]);
 
 void test_strrindex_example_1()
 {
