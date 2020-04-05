@@ -1,9 +1,10 @@
 CFLAGS=-Wall --std=c99
 
-test: bin/strrindex_test bin/swap_test bin/strcat_test
+test: bin/strrindex_test bin/swap_test bin/strcat_test bin/strend_test
 	./bin/strrindex_test
 	./bin/swap_test
 	./bin/strcat_test
+	./bin/strend_test
 
 bin/strrindex_test: strrindex.c strrindex_test.c
 	mkdir -p bin
@@ -16,6 +17,10 @@ bin/swap_test: swap_test.c
 bin/strcat_test: strcat.c strcat_test.c
 	mkdir -p bin
 	cc strcat.c strcat_test.c -o bin/strcat_test
+
+bin/strend_test: strend.c strend_test.c
+	mkdir -p bin
+	cc strend.c strend_test.c -o bin/strend_test
 
 clean:
 	rm -rf bin
