@@ -1,11 +1,12 @@
 CC = gcc
 CFLAGS = -Wall --std=c99
 
-test: bin/strrindex_test bin/swap_test bin/strcat_test bin/strend_test
+test: bin/strrindex_test bin/swap_test bin/strcat_test bin/strend_test bin/expr_test
 	./bin/strrindex_test
 	./bin/swap_test
 	./bin/strcat_test
 	./bin/strend_test
+	./bin/expr_test
 
 bin/strrindex_test: strrindex.c strrindex_test.c
 	mkdir -p bin
@@ -21,7 +22,11 @@ bin/strcat_test: strcat.c strcat_test.c
 
 bin/strend_test: strend.c strend_test.c
 	mkdir -p bin
-	$(CC) $(CFLAGS) strend.c strend_test.c -g -o bin/strend_test
+	$(CC) $(CFLAGS) strend.c strend_test.c -o bin/strend_test
+
+bin/expr_test: expr.c expr_test.c
+	mkdir -p bin
+	$(CC) $(CFLAGS) expr.c expr_test.c -o bin/expr_test
 
 clean:
 	rm -rf bin
