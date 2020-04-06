@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int strrindex(char src[], char pattern[])
+int strrindex(const char src[], const char pattern[])
 {
     int src_len = strlen(src);
     int pattern_len = strlen(pattern);

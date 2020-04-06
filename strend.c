@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-bool strend(char *s, char *t)
+bool strend(const char *s, const char *t)
 {
     unsigned slen, tlen;
     slen = strlen(s);

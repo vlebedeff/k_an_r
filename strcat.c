@@ -1,4 +1,4 @@
-char *mystrcat(char *s, char *t)
+char *mystrcat(char *s, const char *t)
 {
     char *r = s;
 
