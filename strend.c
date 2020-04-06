@@ -3,7 +3,7 @@
 
 bool strend(char *s, char *t)
 {
-    unsigned slen, tlen, i;
+    unsigned slen, tlen;
     slen = strlen(s);
     tlen = strlen(t);
 

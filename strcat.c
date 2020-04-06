@@ -6,7 +6,7 @@ char *mystrcat(char *s, char *t)
         ++s;
     }
 
-    while (*s++ = *t++)
+    while ((*s++ = *t++))
         ;
 
     return r;
