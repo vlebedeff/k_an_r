@@ -9,8 +9,9 @@
 int main(int argc, char *argv[])
 {
     char *tail[TAIL_SIZE], *line;
-    size_t bufsize = 0;
+    size_t bufsize = 200;
     uint8_t i;
+    line = malloc(sizeof(*line) * bufsize);
 
     for (i = 0; i < TAIL_SIZE; i++) {
         tail[i] = NULL;
